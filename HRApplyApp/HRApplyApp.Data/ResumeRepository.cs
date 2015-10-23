@@ -12,11 +12,9 @@ namespace HRApplyApp.Data
     {
         private string _fileName
         {
-            get
-            {
-                return RootPath + "DataFiles\\resumes.txt";
-            }
+            get { return RootPath + "DataFiles\\resumes.txt"; }
         }
+
         public string RootPath { get; set; }
 
         public List<Resume> GetAll()
@@ -72,24 +70,21 @@ namespace HRApplyApp.Data
             var resumes = GetAll();
             resumes.Add(newResume);
 
-            WriteFile(resumes);
+            WriteFile(newResume);
         }
 
-        private void WriteFile(List<Resume> resumes)
+        public void WriteFile(Resume res)
         {
-            using (var writer = File.CreateText(_fileName))
-            {
-                writer.WriteLine(
-                    "ApplicantId,FirstName,LastName,StreetAddress,City,Zipcode,State,Country,Email,ConfirmEmail,PhoneNumber,SkypeName,WorkHistory,Education,Position,Salary,DateOfApplication");
 
-                foreach (Resume res in resumes)
-                {
-                    writer.WriteLine(
-                        String.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16}",
-                            res.ApplicantId, res.FirstName, res.LastName, res.StreetAddress, res.City, res.Zipcode,
-                            res.State, res.Country, res.Email, res.ConfirmEmail, res.PhoneNumber, res.SkypeName,
-                            res.WorkHistory, res.Education, res.Position, res.Salary, res.DateofApplication));
-                }
+            using (var writer = File.AppendText(_fileName))
+            {
+
+                writer.WriteLine(
+                    String.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16}",
+                        res.ApplicantId, res.FirstName, res.LastName, res.StreetAddress, res.City, res.Zipcode,
+                        res.State, res.Country, res.Email, res.ConfirmEmail, res.PhoneNumber, res.SkypeName,
+                        res.WorkHistory, res.Education, res.Position, res.Salary, res.DateofApplication.ToShortDateString()));
+
             }
         }
     }

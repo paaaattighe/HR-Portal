@@ -13,13 +13,22 @@ namespace HRApplyApp.UI.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View(new Resume { DateofApplication = DateTime.Now });
+            return View();
         }
 
         [HttpPost]
         public ActionResult AddResume(Resume newResume)
         {
+            newResume.DateofApplication = DateTime.Now;
+            var repo = new ResumeRepository();
+            repo.RootPath = Server.MapPath("~/");
+            repo.Add(newResume);
             return View("Result", newResume);
+        }
+
+        public ActionResult Result2()
+        {
+            return View("Result2");
         }
 
         public ActionResult Admin()
@@ -29,17 +38,6 @@ namespace HRApplyApp.UI.Controllers
             var resumes = repo.GetAll();
 
             return View(resumes);
-        }
-
-        [HttpPost]
-        public ActionResult AddResumeToList()
-        {
-            var repo = new ResumeRepository();
-            repo.RootPath = Server.MapPath("~/");
-            repo.WriteFile();
-
-            
-
         }
     }
 }
