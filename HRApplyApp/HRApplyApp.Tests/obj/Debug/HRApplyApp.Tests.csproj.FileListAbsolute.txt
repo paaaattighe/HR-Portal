@@ -3,3 +3,9 @@ c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HRApplyApp.
 c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HRApplyApp.Tests\bin\Debug\HRApplyApp.Tests.pdb
 c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HRApplyApp.Tests\obj\Debug\HRApplyApp.Tests.dll
 c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HRApplyApp.Tests\obj\Debug\HRApplyApp.Tests.pdb
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Tests\bin\Debug\DataFiles\resumes.txt
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Tests\bin\Debug\HRApplyApp.Tests.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Tests\bin\Debug\HRApplyApp.Tests.pdb
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Tests\obj\Debug\HRApplyApp.Tests.csprojResolveAssemblyReference.cache
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Tests\obj\Debug\HRApplyApp.Tests.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Tests\obj\Debug\HRApplyApp.Tests.pdb

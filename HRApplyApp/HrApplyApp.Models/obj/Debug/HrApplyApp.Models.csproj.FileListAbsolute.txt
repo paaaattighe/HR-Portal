@@ -3,3 +3,8 @@ c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HrApplyApp.
 c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HrApplyApp.Models\obj\Debug\HrApplyApp.Models.csprojResolveAssemblyReference.cache
 c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HrApplyApp.Models\obj\Debug\HrApplyApp.Models.dll
 c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HrApplyApp.Models\obj\Debug\HrApplyApp.Models.pdb
+C:\_repos\HR-Portal\HRApplyApp\HrApplyApp.Models\bin\Debug\HrApplyApp.Models.dll
+C:\_repos\HR-Portal\HRApplyApp\HrApplyApp.Models\bin\Debug\HrApplyApp.Models.pdb
+C:\_repos\HR-Portal\HRApplyApp\HrApplyApp.Models\obj\Debug\HrApplyApp.Models.csprojResolveAssemblyReference.cache
+C:\_repos\HR-Portal\HRApplyApp\HrApplyApp.Models\obj\Debug\HrApplyApp.Models.dll
+C:\_repos\HR-Portal\HRApplyApp\HrApplyApp.Models\obj\Debug\HrApplyApp.Models.pdb

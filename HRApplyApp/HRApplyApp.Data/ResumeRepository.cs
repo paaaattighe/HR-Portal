@@ -10,7 +10,14 @@ namespace HRApplyApp.Data
 {
     public class ResumeRepository : IResumeRepository
     {
-        private string _fileName = "DataFiles/resumes.txt";
+        private string _fileName
+        {
+            get
+            {
+                return RootPath + "DataFiles\\resumes.txt";
+            }
+        }
+        public string RootPath { get; set; }
 
         public List<Resume> GetAll()
         {
@@ -18,40 +25,39 @@ namespace HRApplyApp.Data
 
             if (File.Exists(_fileName))
             {
-                using (var reader = File.OpenText(_fileName))
+                var reader = File.ReadAllLines(_fileName);
+
+                // read the header
+
+                for (int i = 1; i < reader.Length; i++)
                 {
-                    // read the header
-                    reader.ReadLine();
-
-                    string inputLine;
-                    while ((inputLine = reader.ReadLine()) != null)
+                    var columns = reader[i].Split(',');
+                    var resume = new Resume()
                     {
-                        var columns = inputLine.Split(',');
-                        var resume = new Resume()
-                        {
-                            ApplicantId = int.Parse(columns[0]),
-                            FirstName = columns[1],
-                            LastName = columns[2],
-                            StreetAddress = columns[3],
-                            City = columns[4],
-                            Zipcode = columns[5],
-                            State = columns[6],
-                            Country = columns[7],
-                            Email = columns[8],
-                            ConfirmEmail = columns[9],
-                            PhoneNumber = columns[10],
-                            SkypeName = columns[11],
-                            WorkHistory = columns[12],
-                            Education = columns[13],
-                            Position = columns[14],
-                            Salary = columns[15],
-                            DateofApplication = DateTime.Parse(columns[16])
-                        };
+                        ApplicantId = int.Parse(columns[0]),
+                        FirstName = columns[1],
+                        LastName = columns[2],
+                        StreetAddress = columns[3],
+                        City = columns[4],
+                        Zipcode = columns[5],
+                        State = columns[6],
+                        Country = columns[7],
+                        Email = columns[8],
+                        ConfirmEmail = columns[9],
+                        PhoneNumber = columns[10],
+                        SkypeName = columns[11],
+                        WorkHistory = columns[12],
+                        Education = columns[13],
+                        Position = columns[14],
+                        Salary = columns[15],
+                        DateofApplication = DateTime.Parse(columns[16])
+                    };
 
-                        AllResumes.Add(resume);
-                    }
+                    AllResumes.Add(resume);
                 }
             }
+
+
 
             return AllResumes;
         }

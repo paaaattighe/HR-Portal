@@ -1,0 +1,66 @@
+﻿@model List<HrApplyApp.Models.Resume>
+
+@{
+    ViewBag.Title = "Admin";
+}
+
+<h2>Admin</h2>
+
+
+<div>
+@if (Model.Any())
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Applicant ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Street Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip Code</th>
+                <th>Country</th>
+                <th>Email</th>
+                <th>Confirm Email</th>
+                <th>Phone Number</th>
+                <th>Skype Name</th>
+                <th>Work History</th>
+                <th>Education</th>
+                <th>Position</th>
+                <th>Desired Salary</th>
+                <th>Date of Application</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var resume in Model)
+            {
+                <tr>
+                    <td>@resume.ApplicantId</td>
+                    <td>@resume.FirstName</td>
+                    <td>@resume.LastName</td>
+                    <td>@resume.StreetAddress</td>
+                    <td>@resume.City</td>
+                    <td>@resume.State</td>
+                    <td>@resume.Zipcode</td>
+                    <td>@resume.Country</td>
+                    <td>@resume.Email</td>
+                    <td>@resume.ConfirmEmail</td>
+                    <td>@resume.PhoneNumber</td>
+                    <td>@resume.SkypeName</td>
+                    <td>@resume.WorkHistory</td>
+                    <td>@resume.Education</td>
+                    <td>@resume.Position</td>
+                    <td>@resume.Salary</td>
+                    <td>@resume.DateofApplication</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No Resumes.</p>
+}
+</div>

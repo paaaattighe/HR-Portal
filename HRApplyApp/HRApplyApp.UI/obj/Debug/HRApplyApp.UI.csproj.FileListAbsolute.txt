@@ -33,3 +33,43 @@ c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HRApplyApp.
 c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HRApplyApp.UI\obj\Debug\HRApplyApp.UI.csprojResolveAssemblyReference.cache
 c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HRApplyApp.UI\obj\Debug\HRApplyApp.UI.dll
 c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HRApplyApp.UI\obj\Debug\HRApplyApp.UI.pdb
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\roslyn\csc.exe
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\roslyn\System.Collections.Immutable.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\roslyn\System.Reflection.Metadata.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\roslyn\vbc.exe
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\roslyn\VBCSCompiler.exe
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\roslyn\VBCSCompiler.exe.config
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\HRApplyApp.UI.dll.config
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\HRApplyApp.UI.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\HRApplyApp.UI.pdb
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\HrApplyApp.Models.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\System.Web.Helpers.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\System.Web.Mvc.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\System.Web.Razor.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\System.Web.Webpages.Deployment.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\System.Web.Webpages.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\System.Web.Webpages.Razor.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\HrApplyApp.Models.pdb
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\System.Web.Razor.xml
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\System.Web.Webpages.xml
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\System.Web.Webpages.Deployment.xml
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\System.Web.Webpages.Razor.xml
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\System.Web.Helpers.xml
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\System.Web.Mvc.xml
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\obj\Debug\HRApplyApp.UI.csprojResolveAssemblyReference.cache
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\obj\Debug\HRApplyApp.UI.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\obj\Debug\HRApplyApp.UI.pdb
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\DataFiles\resumes.txt
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\HRApplyApp.Data.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\HRApplyApp.Tests.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\HRApplyApp.Data.pdb
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\HRApplyApp.Tests.pdb

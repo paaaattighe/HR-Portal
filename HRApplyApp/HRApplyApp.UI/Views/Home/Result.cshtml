@@ -4,8 +4,10 @@
     ViewBag.Title = "Result";
 }
 
-<h2>Result</h2>
+<h2>Is this Information Correct?</h2>
 
+@using (Html.BeginForm("ResumeConfirm", "Home", FormMethod.Post))
+{
 <p>First Name: @Html.DisplayFor(m => m.FirstName)</p>
 <p>LastName: @Html.DisplayFor(m => m.LastName)</p>
 <p>Address: @Html.DisplayFor(m => m.StreetAddress)</p>
@@ -21,3 +23,6 @@
 <p>Education: @Html.DisplayFor(m => m.Education)</p>
 <p>Position Applying for: @Html.DisplayFor(m => m.Position)</p>
 <p>Desired Salary: @Html.DisplayFor(m => m.Salary)</p>
+<br />
+<button class="btn btn-danger">Confirm</button>
+}
