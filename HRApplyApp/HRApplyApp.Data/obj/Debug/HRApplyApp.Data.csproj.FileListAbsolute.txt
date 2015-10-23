@@ -1,0 +1,7 @@
+c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HRApplyApp.Data\bin\Debug\HRApplyApp.Data.dll
+c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HRApplyApp.Data\bin\Debug\HRApplyApp.Data.pdb
+c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HRApplyApp.Data\bin\Debug\HrApplyApp.Models.dll
+c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HRApplyApp.Data\bin\Debug\HrApplyApp.Models.pdb
+c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HRApplyApp.Data\obj\Debug\HRApplyApp.Data.csprojResolveAssemblyReference.cache
+c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HRApplyApp.Data\obj\Debug\HRApplyApp.Data.dll
+c:\users\apprentice\documents\visual studio 2015\Projects\HRApplyApp\HRApplyApp.Data\obj\Debug\HRApplyApp.Data.pdb

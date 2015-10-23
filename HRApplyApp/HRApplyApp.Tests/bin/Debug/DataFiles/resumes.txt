@@ -1,0 +1,2 @@
+﻿ApplicantId,FirstName,LastName,StreetAddress,City,Zipcode,State,Country,Email,ConfirmEmail,PhoneNumber,SkypeName,WorkHistory,Education,Position,Salary,DateOfApplication
+1,Rocco,Riccardi,2808 Portman Ave,Cleveland,44109,OH,USA,Rocco.Riccardi.42@gmail.com,Rocco.Riccardi.42@gmail.com,216-375-7961,R0ccO,Badass,School of Hard Knocks,CEO,$1000000,10/23/2015

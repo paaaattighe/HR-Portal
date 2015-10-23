@@ -1,0 +1,23 @@
+﻿@model HrApplyApp.Models.Resume
+
+@{
+    ViewBag.Title = "Result";
+}
+
+<h2>Result</h2>
+
+<p>First Name: @Html.DisplayFor(m => m.FirstName)</p>
+<p>LastName: @Html.DisplayFor(m => m.LastName)</p>
+<p>Address: @Html.DisplayFor(m => m.StreetAddress)</p>
+<p>City: @Html.DisplayFor(m => m.City)</p>
+<p>State: @Html.DisplayFor(m => m.State)</p>
+<p>Zip Code: @Html.DisplayFor(m => m.Zipcode)</p>
+<p>Country: @Html.DisplayFor(m => m.Country)</p>
+<p>Email: @Html.DisplayFor(m => m.Email)</p>
+<p>Confirm Email: @Html.DisplayFor(m => m.ConfirmEmail)</p>
+<p>Phone Number: @Html.DisplayFor(m => m.PhoneNumber)</p>
+<p>Skype Name: @Html.DisplayFor(m => m.SkypeName)</p>
+<p>Work History: @Html.DisplayFor(m => m.WorkHistory)</p>
+<p>Education: @Html.DisplayFor(m => m.Education)</p>
+<p>Position Applying for: @Html.DisplayFor(m => m.Position)</p>
+<p>Desired Salary: @Html.DisplayFor(m => m.Salary)</p>

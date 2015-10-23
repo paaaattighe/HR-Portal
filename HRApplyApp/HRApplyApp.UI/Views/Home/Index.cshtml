@@ -1,0 +1,29 @@
+﻿@model HrApplyApp.Models.Resume
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("AddResume", "Home", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    <p>First Name: @Html.EditorFor(m => m.FirstName)</p>
+    <p>LastName: @Html.EditorFor(m => m.LastName)</p>
+    <p>Address: @Html.EditorFor(m => m.StreetAddress)</p>
+    <p>City: @Html.EditorFor(m => m.City)</p>
+    <p>State: @Html.EditorFor(m => m.State)</p>
+    <p>Zip Code: @Html.EditorFor(m => m.Zipcode)</p>
+    <p>Country: @Html.EditorFor(m => m.Country)</p>
+    <p>Email: @Html.EditorFor(m => m.Email)</p>
+    <p>Confirm Email: @Html.EditorFor(m => m.ConfirmEmail)</p>
+    <p>Phone Number: @Html.EditorFor(m => m.PhoneNumber)</p>
+    <p>Skype Name: @Html.EditorFor(m => m.SkypeName)</p>
+    <p>Work History: @Html.TextAreaFor(m => m.WorkHistory)</p>
+    <p>Education: @Html.TextAreaFor(m => m.Education)</p>
+    <p>Position Applying for: @Html.EditorFor(m => m.Position)</p>
+    <p>Desired Salary: @Html.EditorFor(m => m.Salary)</p>
+
+    <button class="btn btn-danger">Submit</button>
+}
