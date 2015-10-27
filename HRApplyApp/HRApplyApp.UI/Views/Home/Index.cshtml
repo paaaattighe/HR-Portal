@@ -9,21 +9,63 @@
 @using (Html.BeginForm("AddResume", "Home", FormMethod.Post))
 {
     @Html.ValidationSummary(true)
-    <p>First Name: @Html.EditorFor(m => m.FirstName)</p>
-    <p>LastName: @Html.EditorFor(m => m.LastName)</p>
-    <p>Address: @Html.EditorFor(m => m.StreetAddress)</p>
-    <p>City: @Html.EditorFor(m => m.City)</p>
-    <p>State: @Html.EditorFor(m => m.State)</p>
-    <p>Zip Code: @Html.EditorFor(m => m.Zipcode)</p>
-    <p>Country: @Html.EditorFor(m => m.Country)</p>
-    <p>Email: @Html.EditorFor(m => m.Email)</p>
-    <p>Confirm Email: @Html.EditorFor(m => m.ConfirmEmail)</p>
-    <p>Phone Number: @Html.EditorFor(m => m.PhoneNumber)</p>
-    <p>Skype Name: @Html.EditorFor(m => m.SkypeName)</p>
-    <p>Work History: @Html.TextAreaFor(m => m.WorkHistory)</p>
-    <p>Education: @Html.TextAreaFor(m => m.Education)</p>
-    <p>Position Applying for: @Html.EditorFor(m => m.Position)</p>
-    <p>Desired Salary: @Html.EditorFor(m => m.Salary)</p>
+    <div class="row">
+        <div class="col-md-6">
+            <p>First Name: @Html.EditorFor(m => m.FirstName)</p>
+        </div>
+        <div class="col-md-6">
+            <p>LastName: @Html.EditorFor(m => m.LastName)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p>Email: @Html.EditorFor(m => m.Email)</p>
+            <p>Confirm Email: @Html.EditorFor(m => m.ConfirmEmail)</p>
+        </div>
+        <div class="col-md-6">
+            <p>Phone Number: @Html.EditorFor(m => m.PhoneNumber)</p>
+            <p>Skype Name: @Html.EditorFor(m => m.SkypeName)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-xs-12">
+            <p>Address: @Html.EditorFor(m => m.StreetAddress)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p>City: @Html.EditorFor(m => m.City)</p>
+            </div>
+        <div class="col-md-6">
+            <p>State: @Html.EditorFor(m => m.State)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p>Zip Code: @Html.EditorFor(m => m.Zipcode)</p>
+        </div>
+        <div class="col-md-6">
+            <p>Country: @Html.EditorFor(m => m.Country)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>Work History: @Html.TextAreaFor(m => m.WorkHistory)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>Education: @Html.TextAreaFor(m => m.Education)</p>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-md-6">
+            <p>Position Applying for: @Html.EditorFor(m => m.Position)</p>
+        </div>
+        <div class="col-md-6">
+            <p>Desired Salary: @Html.EditorFor(m => m.Salary)</p>
+        </div>
+    </div>
     <button class="btn btn-danger">Submit</button>
 }

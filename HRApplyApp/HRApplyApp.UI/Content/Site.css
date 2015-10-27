@@ -16,3 +16,38 @@ textarea {
     max-width: 280px;
 }
 
+footer {
+    min-width: 100%;
+    text-align: center;
+    height: 100px;
+    background-color: #1f1f1f;
+}
+#wrap {
+    
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+html,
+body {
+    background-color: #e0e0e0;
+  padding-top: 60px;
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+.navbar-right {
+    font-size: 20px;
+    padding-top: 25px;
+}
+#prefooter {
+    padding-left: 20px;
+    background-color: #252729;
+}
+#prefooter li, p {
+    list-style-type: none;
+    color: #a0a0a0;
+    font-size: 15px;
+}

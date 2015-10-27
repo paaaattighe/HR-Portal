@@ -17,15 +17,26 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("HR Apply App", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a href="/Home/Home" class="navbar-brand"> <img alt="The Software Guild" src="http://softwareguild.wpengine.com/wp-content/uploads/swg_logo-white.png" width="250" /></a>
+                
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
+                    @Html.ActionLink("HR Apply App", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+                    <li class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"><a href="#">Policies<span class="caret"></span></a>                        
+                    </li>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">View Policies</a></li>
+                        <li><a href="#">Manage Policies</a></li>
+                        <li><a href="#">Manage Categories</a></li>
+                    </ul>
+                    <li>@Html.ActionLink("Admin", "Index", "Home", new { area = "" }, null)</li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="dropdown">
+    @*<div class="dropdown">
         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             Policies
             <span class="caret"></span>
@@ -35,13 +46,61 @@
             <li><a href="#">Manage Policies</a></li>
             <li><a href="#">Manage Categories</a></li>
         </ul>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - HR Apply App</p>
-        </footer>
+    </div>*@
+    <div id="wrap" class="body-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <h2>Start your application today!</h2>
+                    <p>
+                        Fill out the adjacent form as the first step of your application.
+                        A member of our enrollment team will reach out to you to ask you some additional question, answer any questions you may have, and help you learn more about The Software Guild.
+                        Then, you will be asked to complete the essay portion of the application and aptitude test. If you have questions and are not ready to apply, please fill out our contact form.
+                    </p>
+                </div>
+
+                <div class="container">
+                    <div class="col-md-offset-3 col-md-5 col-xs-12">
+                        @RenderBody()
+                    </div>
+                </div>
+               <br />
+            </div>
+        </div>
+
+        <div id="prefooter" class="row">
+            <div class="no-container">
+                <div class="col-md-4 col-xs-12">
+                    <h6>Menu</h6>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Become an Employer</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <h6>Locations</h6>
+                    <ul>
+                        <li><a href="#">Akron</a></li>
+                        <li><a href="#">Louisville</a></li>
+                        <li><a href="#">Minneapolis</a></li>
+                        <li><a href="#">Online</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <h6>ABOUT SOFTWARE GUILD</h6>
+                    <p>By focusing on the languages companies want, with real-world curriculum taught by experienced master instructors, apprentices graduate from The Software Guild with relevant, employable skills. A choice of locations or online programs offer options that are designed to help apprentices succeed.</p>
+                </div>
+            </div>
+        </div>
+            <footer class="no-container">                 
+                        <p style="color: #676767">Copyright &copy; @DateTime.Now.Year The Software Guild. All rights reserved.</p>            
+            </footer>
     </div>
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
