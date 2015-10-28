@@ -1,0 +1,17 @@
+﻿@model List<HrApplyApp.Models.PolicyCategory>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>View Policies</h2>
+
+@foreach (var cat in Model)
+{
+    <h4>@cat.PolicyCategoryName</h4>
+    foreach (var pol in cat.PolicyList)
+    {
+        <p>@pol.PolicyName</p>
+        <p>@pol.PolicyDescription</p>
+    }
+}
