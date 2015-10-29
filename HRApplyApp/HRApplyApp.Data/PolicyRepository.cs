@@ -50,17 +50,23 @@ namespace HRApplyApp.Data
 
         public List<PolicyCategory> GetPoliciesByCategory(List<Policy> policyList)
         {
-            PolicyCategory polcat = new PolicyCategory();
+            //PolicyCategory polcat = new PolicyCategory();
             List<PolicyCategory> polcatlist = new List<PolicyCategory>();
             foreach (var policy in policyList)
             {
-                foreach (var singlepolicy in policyList)
+                if (polcat.PolicyCategoryName != policy.Category)
                 {
-                    var catstring = singlepolicy.Category;
-                    if (polcatlist.Any(m=>m.PolicyCategoryName == catstring)
-                    {
-                        
-                    }
+                    PolicyCategory polcat = new PolicyCategory();
+                    polcat.PolicyCategoryName = policy.Category;
+                    polcat.PolicyList = new List<Policy>();
+                    polcat.PolicyList.Add(policy);
+                    polcatlist.Add(polcat);
+                }
+                else
+                {
+                    PolicyCategory pppp = (PolicyCategory)from p in polcat.PolicyCategoryName where p.Equals(policy.Category) select p;
+                    pppp.PolicyList.Add(policy);
+                    polcatlist.Add(pppp);
                 }
 
             }
