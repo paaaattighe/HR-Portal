@@ -4,68 +4,97 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Apply</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-xs-12">
+            <h2>Start your application today!</h2>
+            <p>
+                Fill out the adjacent form as the first step of your application.
+                A member of our enrollment team will reach out to you to ask you some additional question, answer any questions you may have, and help you learn more about The Software Guild.
+                Then, you will be asked to complete the essay portion of the application and aptitude test. If you have questions and are not ready to apply, please fill out our contact form.
+            </p>
+        </div>
+        <div class="col-md-offset-1 col-md-7 col-xs-12">
+        <h2>Apply</h2>
 
-@using (Html.BeginForm("AddResume", "Home", FormMethod.Post))
-{
-    @Html.ValidationSummary(true)
-    <div class="row">
-        <div class="col-md-6">
-            <p>First Name: @Html.EditorFor(m => m.FirstName)</p>
-        </div>
-        <div class="col-md-6">
-            <p>LastName: @Html.EditorFor(m => m.LastName)</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <p>Email: @Html.EditorFor(m => m.Email)</p>
-            <p>Confirm Email: @Html.EditorFor(m => m.ConfirmEmail)</p>
-        </div>
-        <div class="col-md-6">
-            <p>Phone Number: @Html.EditorFor(m => m.PhoneNumber)</p>
-            <p>Skype Name: @Html.EditorFor(m => m.SkypeName)</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12 col-xs-12">
-            <p>Address: @Html.EditorFor(m => m.StreetAddress)</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <p>City: @Html.EditorFor(m => m.City)</p>
+        @using (Html.BeginForm("AddResume", "Home", FormMethod.Post))
+        {
+            @Html.ValidationSummary(true)
+            <div class="row">
+                <div class="col-md-6">
+                    <p>First Name:</p>
+                    <p>@Html.TextBoxFor(m => m.FirstName, new { placeholder = "First Name" })</p>
+                </div>
+                <div class="col-md-6">
+                    <p>LastName:</p>
+                    <p>@Html.TextBoxFor(m => m.LastName, new { placeholder = "Last Name" })</p>
+                </div>
             </div>
-        <div class="col-md-6">
-            <p>State: @Html.EditorFor(m => m.State)</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <p>Zip Code: @Html.EditorFor(m => m.Zipcode)</p>
-        </div>
-        <div class="col-md-6">
-            <p>Country: @Html.EditorFor(m => m.Country)</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <p>Work History: @Html.TextAreaFor(m => m.WorkHistory)</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <p>Education: @Html.TextAreaFor(m => m.Education)</p>
-        </div>
-    </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Email:</p> 
+                    <p>@Html.TextBoxFor(m => m.Email, new { placeholder = "Email Address" })</p>
+                    <p>Confirm Email:</p>
+                    <p>@Html.TextBoxFor(m => m.ConfirmEmail, new { placeholder = "Confirm Email" })</p>
+                </div>
+                <div class="col-md-6">
+                    <p>Phone Number:</p>
+                    <p>@Html.TextBoxFor(m => m.PhoneNumber, new { placeholder = "Phone e.g. (555-555-5555)" })</p>
+                    <p>Skype Name:</p> 
+                    <p>@Html.TextBoxFor(m => m.SkypeName, new { placeholder = "Skype Name" })</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-xs-12">
+                    <p>Address:</p> 
+                    <p>@Html.TextBoxFor(m => m.StreetAddress, new { placeholder= "Street Address" })</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>City:</p> 
+                    <p>@Html.TextBoxFor(m => m.City, new { placeholder = "City" })</p>
+                </div>
+                <div class="col-md-6">
+                    <p>State:</p>
+                   <p> @Html.TextBoxFor(m => m.State, new { placeholder = "State" })</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Zip Code:</p>
+                    <p>@Html.TextBoxFor(m => m.Zipcode, new { placeholder = "Zipcode" })</p>
+                </div>
+                <div class="col-md-6">
+                    <p>Country:</p> 
+                    <p>@Html.TextBoxFor(m => m.Country, new { placeholder= "Country" })</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Work History:</p> 
+                    <p>@Html.TextAreaFor(m => m.WorkHistory, new { placeholder = "Work History" })</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Education:</p>
+                    <p>@Html.TextAreaFor(m => m.Education, new { placeholder = "Education" })</p>
+                </div>
+            </div>
 
-    <div class="row">
-        <div class="col-md-6">
-            <p>Position Applying for: @Html.EditorFor(m => m.Position)</p>
-        </div>
-        <div class="col-md-6">
-            <p>Desired Salary: @Html.EditorFor(m => m.Salary)</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Position Applying for:</p> 
+                    <p>@Html.TextBoxFor(m => m.Position, new { placeholder = "Position" })</p>
+                </div>
+                <div class="col-md-6">
+                    <p>Desired Salary:</p> 
+                    <p>@Html.TextBoxFor(m => m.Salary, new { placeholder = "Desired Salary" })</p>
+                </div>
+            </div>
+            <button class="btn btn-danger">Submit</button>
+        }
         </div>
     </div>
-    <button class="btn btn-danger">Submit</button>
-}
+</div>

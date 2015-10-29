@@ -57,7 +57,7 @@ namespace HRApplyApp.Data
                 foreach (var singlepolicy in policyList)
                 {
                     var catstring = singlepolicy.Category;
-                    if (polcatlist.Any(m=>m.PolicyCategoryName == catstring)
+                    if (polcatlist.Any(m=>m.PolicyCategoryName == catstring))
                     {
                         
                     }

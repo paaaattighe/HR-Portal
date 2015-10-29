@@ -15,9 +15,19 @@ namespace HRApplyApp.UI
 
             routes.MapRoute(
                 name: "Default",
+                url: "Apply",
+                defaults: new
+                {
+                    controller = "Home",
+                    action = "Index"
+                }
+                );
+
+            routes.MapRoute(
+                name: "a",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+                );
         }
     }
 }

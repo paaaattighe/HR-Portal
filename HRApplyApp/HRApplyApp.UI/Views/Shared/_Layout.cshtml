@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
@@ -17,10 +18,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/Home/Home" class="navbar-brand"> <img alt="The Software Guild" src="http://softwareguild.wpengine.com/wp-content/uploads/swg_logo-white.png" width="250" /></a>
+                <a href="Apply" class="navbar-brand"> <img alt="The Software Guild" src="http://softwareguild.wpengine.com/wp-content/uploads/swg_logo-white.png" width="250" /></a>
                 
             </div>
-            <div class="navbar-collapse collapse">
+            @RenderSection("Admin", false)
+            @*<div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     @Html.ActionLink("HR Apply App", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
 
@@ -33,7 +35,7 @@
                     </ul>
                     <li>@Html.ActionLink("Admin", "Admin", "Home", new { area = "" }, null)</li>
                 </ul>
-            </div>
+            </div>*@
         </div>
     </div>
     @*<div class="dropdown">
@@ -50,21 +52,10 @@
     <div id="wrap" class="body-content">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-xs-12">
-                    <h2>Start your application today!</h2>
-                    <p>
-                        Fill out the adjacent form as the first step of your application.
-                        A member of our enrollment team will reach out to you to ask you some additional question, answer any questions you may have, and help you learn more about The Software Guild.
-                        Then, you will be asked to complete the essay portion of the application and aptitude test. If you have questions and are not ready to apply, please fill out our contact form.
-                    </p>
-                </div>
-
-                <div class="container">
-                    <div class="col-md-offset-3 col-md-5 col-xs-12">
+                    <div class="col-xs-12">
                         @RenderBody()
                     </div>
                 </div>
-               <br />
             </div>
         </div>
 
@@ -97,6 +88,7 @@
                     <p>By focusing on the languages companies want, with real-world curriculum taught by experienced master instructors, apprentices graduate from The Software Guild with relevant, employable skills. A choice of locations or online programs offer options that are designed to help apprentices succeed.</p>
                 </div>
             </div>
+
         </div>
             <footer class="no-container">                 
                         <p style="color: #676767">Copyright &copy; @DateTime.Now.Year The Software Guild. All rights reserved.</p>            

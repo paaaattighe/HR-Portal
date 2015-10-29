@@ -17,14 +17,22 @@ namespace HRApplyApp.UI.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddResume(Resume newResume)
+        public ActionResult Index(Resume newResume)
         {
             newResume.DateofApplication = DateTime.Now;
             var repo = new ResumeRepository();
             repo.RootPath = Server.MapPath("~/");
             repo.Add(newResume);
-            return View("Result", newResume);
+            
+
+            if (ModelState.IsValid)
+            {
+                return View("Result", newResume);
+            }
+
+            return View();
         }
+
 
         public ActionResult Result2()
         {
