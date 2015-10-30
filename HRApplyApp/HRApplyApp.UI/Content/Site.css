@@ -1,4 +1,5 @@
 ﻿.navbar-right {
+    background-color:#1f1f1f;
     font-size: 20px;
     padding-top: 25px;
 }
@@ -9,51 +10,48 @@ body {
     padding-bottom: 20px;
 }
 
-/* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
 
 footer {
     position: absolute;
     bottom: auto;
     min-width: 100%;
-    text-align: center;
+    text-align: left;
     height: 100px;
     background-color: #1f1f1f;
 }
 #wrap {
-    background-color: #f8f8f8;
-  height: auto !important;
-  height: 110%;
-  /* Negative indent footer by it's height */
-  margin: 0 auto -60px;
-}
-html,
-body {
-    height: 110%;
-  
-  padding-top: 40px;
-  min-height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
+    margin: 0 auto 100px;
 }
 
+html,
+body {
+  padding-top: 40px;
+  background-color: #f8f8f8;
+}
 
 #prefooter {
     padding-left: 20px;
     background-color: #252729;
 }
 
-#prefooter li, p {
+#prefooter li {
     list-style-type: none;
+    color: #a0a0a0;
+    font-size: 15px;
+}
+
+
+#prefooter h6 {
+    color: #a0a0a0;
+    font-size: 15px;
+}
+
+#prefooter p {
     color: #a0a0a0;
     font-size: 15px;
 }
