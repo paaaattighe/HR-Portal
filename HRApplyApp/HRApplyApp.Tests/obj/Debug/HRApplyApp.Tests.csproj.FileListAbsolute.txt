@@ -9,3 +9,5 @@ C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Tests\bin\Debug\HRApplyApp.Tests.pdb
 C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Tests\obj\Debug\HRApplyApp.Tests.csprojResolveAssemblyReference.cache
 C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Tests\obj\Debug\HRApplyApp.Tests.dll
 C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Tests\obj\Debug\HRApplyApp.Tests.pdb
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Tests\bin\Debug\HRApplyApp.Tests.dll.CodeAnalysisLog.xml
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Tests\bin\Debug\HRApplyApp.Tests.dll.lastcodeanalysissucceeded

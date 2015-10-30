@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4 col-xs-12">
+        <div class="col-md-offset-1 col-md-3 col-xs-12">
             <br />
             <h2>Your career is waiting.</h2>
             <h1>START YOUR APPLICATION!</h1>
@@ -18,7 +18,7 @@
             <br />
             <hr />
         </div>
-        <div class="col-md-offset-1 col-md-7 col-xs-12">
+        <div class="col-md-7 col-xs-12">
             <br />
             <div class="row">
                 <div class="col-xs-12">
@@ -27,84 +27,82 @@
             </div>
             <div style="background-color: white; box-shadow: 0 0 10px black;" class="container">
                 <br />
-                @using (Html.BeginForm("AddResume", "Home", FormMethod.Post))
+                @using (Html.BeginForm("Index", "Home", FormMethod.Post))
                 {
                     @Html.ValidationSummary(true)
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>First Name:</p>
-                            <p>@Html.TextBoxFor(m => m.FirstName, new { style = "width:100%", placeholder = "First Name" })</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>First Name: *  @Html.ValidationMessageFor(m => m.FirstName)</p>
+                                <p>@Html.TextBoxFor(m => m.FirstName, new { style = "width:100%", placeholder = "First Name" })</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>LastName: * @Html.ValidationMessageFor(m => m.LastName)</p>
+                                <p>@Html.TextBoxFor(m => m.LastName, new { style = "width:100%", placeholder = "Last Name" })</p>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <p>LastName:</p>
-                            <p>@Html.TextBoxFor(m => m.LastName, new { style = "width:100%", placeholder = "Last Name" })</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Email: * @Html.ValidationMessageFor(m => m.Email)</p>
+                                <p>@Html.TextBoxFor(m => m.Email, new { style = "width:100%", placeholder = "Email Address" })</p>
+                                <p>Confirm Email: * @Html.ValidationMessageFor(m => m.ConfirmEmail)</p>
+                                <p>@Html.TextBoxFor(m => m.ConfirmEmail, new { style = "width:100%", placeholder = "Confirm Email" })</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Phone Number: * @Html.ValidationMessageFor(m => m.PhoneNumber)</p>
+                                <p>@Html.TextBoxFor(m => m.PhoneNumber, new { style = "width:100%", placeholder = "Phone e.g. (555-555-5555)" })</p>
+                                <p>Skype Name: </p>
+                                <p>@Html.TextBoxFor(m => m.SkypeName, new { style = "width:100%", placeholder = "Skype Name" })</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>Email:</p>
-                            <p>@Html.TextBoxFor(m => m.Email, new { style = "width:100%", placeholder = "Email Address" })</p>
-                            <p>Confirm Email:</p>
-                            <p>@Html.TextBoxFor(m => m.ConfirmEmail, new { style = "width:100%", placeholder = "Confirm Email" })</p>
+                        <div class="row">
+                            <div class="col-lg-12 col-xs-12">
+                                <p>Address: * @Html.ValidationMessageFor(m => m.StreetAddress)</p>
+                                <p>@Html.TextBoxFor(m => m.StreetAddress, new { style = "width:100%", placeholder = "Street Address" })</p>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <p>Phone Number:</p>
-                            <p>@Html.TextBoxFor(m => m.PhoneNumber, new { style = "width:100%", placeholder = "Phone e.g. (555-555-5555)" })</p>
-                            <p>Skype Name:</p>
-                            <p>@Html.TextBoxFor(m => m.SkypeName, new { style = "width:100%", placeholder = "Skype Name" })</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>City: * @Html.ValidationMessageFor(m => m.City)</p>
+                                <p>@Html.TextBoxFor(m => m.City, new { style = "width:100%", placeholder = "City" })</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>State: * @Html.ValidationMessageFor(m => m.State)</p>
+                                <p> @Html.TextBoxFor(m => m.State, new { style = "width:100%", placeholder = "State" })</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12 col-xs-12">
-                            <p>Address:</p>
-                            <p>@Html.TextBoxFor(m => m.StreetAddress, new { style = "width:100%", placeholder = "Street Address" })</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Zip Code: * @Html.ValidationMessageFor(m => m.Zipcode)</p>
+                                <p>@Html.TextBoxFor(m => m.Zipcode, new { style = "width:100%", placeholder = "Zipcode" })</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Country: * @Html.ValidationMessageFor(m => m.Country)</p>
+                                <p>@Html.TextBoxFor(m => m.Country, new { style = "width:100%", placeholder = "Country" })</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>City:</p>
-                            <p>@Html.TextBoxFor(m => m.City, new { style = "width:100%", placeholder = "City" })</p>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>Work History: * @Html.ValidationMessageFor(m => m.WorkHistory)</p>
+                                <p>@Html.TextBoxFor(m => m.WorkHistory, new { style = "width:100%", placeholder = "Work History" })</p>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <p>State:</p>
-                            <p> @Html.TextBoxFor(m => m.State, new { style = "width:100%", placeholder = "State" })</p>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>Education: * @Html.ValidationMessageFor(m => m.Education)</p>
+                                <p>@Html.TextBoxFor(m => m.Education, new { style = "width:100%", placeholder = "Education" })</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>Zip Code:</p>
-                            <p>@Html.TextBoxFor(m => m.Zipcode, new { style = "width:100%", placeholder = "Zipcode" })</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p>Country:</p>
-                            <p>@Html.TextBoxFor(m => m.Country, new { style = "width:100%", placeholder = "Country" })</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <p>Work History:</p>
-                            <p>@Html.TextBoxFor(m => m.WorkHistory, new { style = "width:100%", placeholder = "Work History" })</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <p>Education:</p>
-                            <p>@Html.TextBoxFor(m => m.Education, new { style = "width:100%", placeholder = "Education" })</p>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>Position Applying for:</p>
-                            <p>@Html.TextBoxFor(m => m.Position, new { style = "width:100%", placeholder = "Position" })</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p>Desired Salary:</p>
-                            <p>@Html.TextBoxFor(m => m.Salary, new { style = "width:100%", placeholder = "Desired Salary" })</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Position Applying for: </p>
+                                <p>@Html.TextBoxFor(m => m.Position, new { style = "width:100%", placeholder = "Position" })</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Desired Salary: </p>
+                                <p>@Html.TextBoxFor(m => m.Salary, new { style = "width:100%", placeholder = "Desired Salary" })</p>
+                            </div>
                             <button style="width: 100%;" class="btn btn-danger">Apply Now</button>
                             <br />
                             <br />

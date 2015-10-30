@@ -27,7 +27,7 @@ namespace HRApplyApp.UI.Controllers
 
             if (ModelState.IsValid)
             {
-                return View("Result", newResume);
+            return View("Result", newResume);
             }
 
             return View();

@@ -7,25 +7,41 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HrApplyApp.Models
 {
-    public class Resume : IValidatableObject
+    public class Resume //: IValidatableObject
     {
         
         public int ApplicantId { get; set; }
+        [Required]
         public string FirstName { get; set; }
+        [Required]
         public string  LastName { get; set; }
+        [Required]
         public string StreetAddress { get; set; }
+        [Required]
         public string City { get; set; }
+        [Required]
         public string State { get; set; }
+        [Required]
         public string Country { get; set; }
+        [Required]
         public string Zipcode { get; set; }
+        [Required]
         public string Email { get; set; }
+        [Required]
         public string ConfirmEmail { get; set; }
+        [Required]
         public string PhoneNumber { get; set; }
+        
         public string SkypeName { get; set; }
+        [Required]
         public string Education { get; set; }
+        
         public string Salary { get; set; }
+        [Required]
         public string WorkHistory { get; set; }
+        
         public string Position { get; set; }
+
         public DateTime DateofApplication { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
@@ -96,7 +112,7 @@ namespace HrApplyApp.Models
             {
                 errors.Add(new ValidationResult("Your email needs confirming...", new[] { "ConfirmEmail" }));
             }
-            
+
             return errors;
         }
     }
