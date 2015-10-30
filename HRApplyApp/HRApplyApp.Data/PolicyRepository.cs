@@ -88,6 +88,27 @@ namespace HRApplyApp.Data
             WriteFile(newPolicy);
         }
 
+        public void Delete(int id)
+        {
+            var policyList = GetAll();
+            policyList.RemoveAll(p => p.PolicyID == id);
+            foreach (var policy in policyList)
+            {
+                WriteFile(policy);
+            }
+        }
+
+        public void Edit(Policy policy)
+        {
+            var policyList = GetAll();
+            policyList.RemoveAll(p => p.PolicyID == policy.PolicyID);
+            policyList.Add(policy);
+            foreach (var pol in policyList)
+            {
+                WriteFile(pol);
+            }
+        }
+
         public void WriteFile(Policy pol)
         {
 

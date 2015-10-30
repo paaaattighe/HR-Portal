@@ -29,5 +29,13 @@ namespace HRApplyApp.UI.Controllers
         //    repo.Add(newPolicy);
         //    return View("Index", newPolicy);
         //}
+
+        //public ActionResult Delete()
+        //{
+        //    var repo = new PolicyRepository();
+        //    repo.RootPath = Server.MapPath("~/");
+
+        //    repo.Delete();
+        //}
     }
 }
