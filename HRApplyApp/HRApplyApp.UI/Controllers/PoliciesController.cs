@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using HrApplyApp.Models;
 using HRApplyApp.Data;
+using HRApplyApp.UI.Models;
 
 namespace HRApplyApp.UI.Controllers
 {
@@ -15,10 +16,11 @@ namespace HRApplyApp.UI.Controllers
         {
             var repo = new PolicyRepository();
             repo.RootPath = Server.MapPath("~/");
-            var policylist = repo.GetAll();
-            var categories = repo.GetPoliciesByCategory(policylist);
+            var vm = new PoliciesByCategoryVM();
+            vm.AllPolicies = repo.GetAll();
+            vm.Polcatlist = repo.GetAllPolicyCategories();
 
-            return View("Index", categories);
+            return View("Index", vm);
         }
 
         [HttpPost]

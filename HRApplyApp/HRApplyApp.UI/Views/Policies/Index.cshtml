@@ -1,4 +1,4 @@
-﻿@model List<HrApplyApp.Models.PolicyCategory>
+﻿@model HRApplyApp.UI.Models.PoliciesByCategoryVM
 
 @{
     ViewBag.Title = "Index";
@@ -6,15 +6,25 @@
 
 <h2>View Policies</h2>
 
-@foreach (var cat in Model)
+@foreach (var pol in Model.AllPolicies.ToList())
 {
-    <h4>@cat.PolicyCategoryName</h4>
-    foreach (var pol in cat.PolicyList)
-    {
-        <p>@pol.PolicyName</p>
-        <p>@pol.PolicyDescription</p>
-    }
+    <p>Name : @pol.PolicyName</p>
+    <p>Description : @pol.PolicyDescription</p>
+    <p>Category : @pol.Category</p>
 }
+
+<h2>View policies by category:</h2>
+@*drop down here*@
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Categories
+        <span class="caret"></span>
+    </button>
+    @*<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        @foreach ()
+        <li><a href="#">Action</a></li>
+    </ul>*@
+</div>
 
 @section Admin {
     <div class="navbar-collapse collapse">

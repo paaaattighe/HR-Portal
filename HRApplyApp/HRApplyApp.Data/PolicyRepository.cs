@@ -48,29 +48,28 @@ namespace HRApplyApp.Data
             return AllPolicies;
         }
 
-        public List<PolicyCategory> GetPoliciesByCategory(List<Policy> policyList)
+        public List<PolicyCategory> GetAllPolicyCategories()
         {
-            PolicyCategory polcat = new PolicyCategory();
             List<PolicyCategory> polcatlist = new List<PolicyCategory>();
-            foreach (var policy in policyList)
+
+            if (File.Exists(_fileName))
             {
-                if (polcat.PolicyCategoryName != policy.Category)
+                var reader = File.ReadAllLines(_fileName);
+
+                // read the header
+
+                for (int i = 1; i < reader.Length; i++)
                 {
-                    PolicyCategory polcat2 = new PolicyCategory();
-                    polcat.PolicyCategoryName = policy.Category;
-                    polcat.PolicyList = new List<Policy>();
-                    polcat.PolicyList.Add(policy);
+                    var columns = reader[i].Split(',');
+                    var polcat = new PolicyCategory()
+                    {
+                        PolicyCategoryName = columns[3],
+                    };
+
                     polcatlist.Add(polcat);
                 }
-                else
-                {
-                    PolicyCategory pppp = (PolicyCategory)from p in polcat.PolicyCategoryName where p.Equals(policy.Category) select p;
-                    pppp.PolicyList.Add(policy);
-                    polcatlist.Add(pppp);
-
-                }
-
             }
+
             return polcatlist;
         }
 
