@@ -56,7 +56,6 @@ namespace HRApplyApp.Data
             {
                 if (polcat.PolicyCategoryName != policy.Category)
                 {
-
                     PolicyCategory polcat2 = new PolicyCategory();
                     polcat.PolicyCategoryName = policy.Category;
                     polcat.PolicyList = new List<Policy>();
