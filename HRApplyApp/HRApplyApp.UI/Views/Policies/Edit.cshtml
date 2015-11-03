@@ -1,0 +1,23 @@
+﻿@model HrApplyApp.Models.Policy
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<div>
+    <h1>Edit Policy</h1>
+    <h3>@Html.ActionLink("Back to list", "Manage", "Policies")</h3>
+    <form action="/Policies/EditPolicy" method="POST">
+        <p>
+            <label>Name</label>
+            <input type="text" id="Name" name="Name" />
+        </p>
+        <p>
+            <label>Description</label>
+            <input type="text" id="Description" name="Description"/>
+        </p>
+        //@Html.Hidden("id", Model.PolicyID);
+        <button class="btn btn-primary">Save</button>
+    </form>
+</div>

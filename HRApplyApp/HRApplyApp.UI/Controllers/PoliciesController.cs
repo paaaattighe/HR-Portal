@@ -21,21 +21,65 @@ namespace HRApplyApp.UI.Controllers
             return View("Index", categories);
         }
 
-        //[HttpPost]
-        //public ActionResult AddPolicy(Policy newPolicy)
-        //{
-        //    var repo = new PolicyRepository();
-        //    repo.RootPath = Server.MapPath("~/");
-        //    repo.Add(newPolicy);
-        //    return View("Index", newPolicy);
-        //}
+        [HttpPost]
+        public ActionResult AddPolicy()
+        {
+            var p = new Policy();
 
-        //public ActionResult Delete()
-        //{
-        //    var repo = new PolicyRepository();
-        //    repo.RootPath = Server.MapPath("~/");
+            p.PolicyName = Request.Form["Name"];
+            p.PolicyDescription = Request.Form["Description"];
 
-        //    repo.Delete();
-        //}
+            var repo = new PolicyRepository();
+            repo.RootPath = Server.MapPath("~/");
+            repo.Add(p);
+
+            return RedirectToAction("Manage");
+        }
+
+        public ActionResult Manage()
+        {
+            var repo = new PolicyRepository();
+            repo.RootPath = Server.MapPath("~/");
+            var policies = repo.GetAll();
+            return View(policies);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var repo = new PolicyRepository();
+            repo.RootPath = Server.MapPath("~/");
+            var policy = repo.GetPolicyById(id);
+
+            repo.Delete(policy.PolicyID);
+
+            return RedirectToAction("Manage");
+        }
+
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var repo = new PolicyRepository();
+            repo.RootPath = Server.MapPath("~/");
+            var pol = repo.GetPolicyById(id);
+            return View(pol);
+        }
+
+        [HttpPost]
+        public ActionResult EditPolicy(int id)
+        {
+            int policyId = int.Parse(Request.Form["id"]);
+            var repo = new PolicyRepository();
+            repo.RootPath = Server.MapPath("~/");
+            var policy = repo.GetPolicyById(policyId);
+
+            repo.Edit(policy);
+
+            return RedirectToAction("Manage");
+        }
     }
 }

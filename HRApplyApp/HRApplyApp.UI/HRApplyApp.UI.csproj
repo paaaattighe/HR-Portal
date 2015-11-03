@@ -131,6 +131,9 @@
     <Content Include="Views\Home\Admin.cshtml" />
     <Content Include="Views\Home\Result2.cshtml" />
     <Content Include="Views\Policies\Index.cshtml" />
+    <Content Include="Views\Policies\Add.cshtml" />
+    <Content Include="Views\Policies\Manage.cshtml" />
+    <Content Include="Views\Policies\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

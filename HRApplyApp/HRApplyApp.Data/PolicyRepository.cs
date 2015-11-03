@@ -56,7 +56,6 @@ namespace HRApplyApp.Data
             {
                 if (polcat.PolicyCategoryName != policy.Category)
                 {
-
                     PolicyCategory polcat2 = new PolicyCategory();
                     polcat.PolicyCategoryName = policy.Category;
                     polcat.PolicyList = new List<Policy>();
@@ -85,17 +84,15 @@ namespace HRApplyApp.Data
             var Policies = GetAll();
             Policies.Add(newPolicy);
 
-            WriteFile(newPolicy);
+            WriteFile(Policies);
         }
 
         public void Delete(int id)
         {
             var policyList = GetAll();
             policyList.RemoveAll(p => p.PolicyID == id);
-            foreach (var policy in policyList)
-            {
-                WriteFile(policy);
-            }
+            WriteFile(policyList);
+            
         }
 
         public void Edit(Policy policy)
@@ -103,24 +100,28 @@ namespace HRApplyApp.Data
             var policyList = GetAll();
             policyList.RemoveAll(p => p.PolicyID == policy.PolicyID);
             policyList.Add(policy);
-            foreach (var pol in policyList)
+            WriteFile(policyList);
+            
+        }
+
+        public void WriteFile(List<Policy> policies )
+        {
+
+            using (var writer = File.CreateText(_fileName))
             {
-                WriteFile(pol);
+                writer.WriteLine("policyid,policyname,policydescription,category");
+                foreach (Policy pol in policies)
+                {
+                    writer.WriteLine(
+                        String.Format("{0},{1},{2},{3}",
+                            pol.PolicyID, pol.PolicyName, pol.PolicyDescription, pol.Category));
+                }
             }
         }
 
-        public void WriteFile(Policy pol)
+        public Policy GetPolicyById(int id)
         {
-
-            using (var writer = File.AppendText(_fileName))
-            {
-
-                writer.WriteLine(
-                    String.Format("{0},{1},{2},{3}",
-                        pol.PolicyID, pol.PolicyName, pol.PolicyDescription, pol.Category));
-
-
-            }
+            return GetAll().FirstOrDefault(p => p.PolicyID == id);
         }
     }
 }
