@@ -72,11 +72,13 @@ namespace HRApplyApp.UI.Controllers
         [HttpPost]
         public ActionResult EditPolicy(int id)
         {
-            int policyId = int.Parse(Request.Form["id"]);
+            Policy policy = new Policy();
+            policy.PolicyID = int.Parse(Request.Form["id"]);
+            policy.PolicyName = Request.Form["Name"];
+            policy.PolicyDescription = Request.Form["Description"];
+
             var repo = new PolicyRepository();
             repo.RootPath = Server.MapPath("~/");
-            var policy = repo.GetPolicyById(policyId);
-
             repo.Edit(policy);
 
             return RedirectToAction("Manage");
