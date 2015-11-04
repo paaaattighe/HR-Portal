@@ -15,11 +15,11 @@ namespace HRApplyApp.UI.Models
         public PolicyCategory Category { get; set; }
         public List<PolicyCategory> Polcatlist { get; set; }
 
-        public List<Policy> CreatePolicyList(PolicyCategory polcat, List<Policy> pollist)
+        public List<Policy> CreatePolicyList(string cat)
         {
-            var pols = new List<Policy>();
-            pols = pollist.Where(p => p.Category == polcat.PolicyCategoryName).ToList();
-            return pols;
+            List<Policy> pollist = new List<Policy>();
+            pollist = pollist.Where(p => p.Category == cat).ToList();
+            return pollist;
         }
     }
 }

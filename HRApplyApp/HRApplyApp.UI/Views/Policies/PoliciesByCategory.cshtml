@@ -1,0 +1,13 @@
+﻿@model HRApplyApp.UI.Models.PoliciesByCategoryVM
+
+@{
+    ViewBag.Title = "PoliciesByCategory";
+}
+
+<h2>Policies under Category</h2>
+
+@foreach (var pol in Model.Policies)
+{
+    <p>@pol.PolicyName</p>
+    <p>@pol.PolicyDescription</p>
+}

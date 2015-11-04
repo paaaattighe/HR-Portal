@@ -85,5 +85,13 @@ namespace HRApplyApp.UI.Controllers
 
             return RedirectToAction("Manage");
         }
+
+        public ActionResult PoliciesByCategory()
+        {
+            var pvm = new PoliciesByCategoryVM();
+            string catname = Request.Form["Name"];
+            pvm.Policies = pvm.CreatePolicyList(catname);
+            return View(pvm);
+        }
     }
 }
