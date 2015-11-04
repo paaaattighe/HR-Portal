@@ -22,12 +22,15 @@
         Categories
         <span class="caret"></span>
     </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        @foreach (var cat in Model.Polcatlist)
+@using (Html.DropDownListFor(m=>m.Polcatlist, Model.Polcatlist))
+{
+    @*<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">*@
+        foreach (var cat in Model.Polcatlist)
         {
             <li><a href="PoliciesByCategory.cshtml" id="Name" class="Name">@cat.PolicyCategoryName</a></li>
         }
-    </ul>
+    @*</ul>*@
+}
 </div>
 
 @section Admin {

@@ -37,6 +37,7 @@ namespace HRApplyApp.Data
                     {
                         policy.PolicyDescription += columns[j] + ",";
                     }
+                    policy.PolicyDescription = policy.PolicyDescription.TrimEnd(',');
 
                     policy.PolicyID = int.Parse(columns[0]);
                     policy.PolicyName = columns[1];
