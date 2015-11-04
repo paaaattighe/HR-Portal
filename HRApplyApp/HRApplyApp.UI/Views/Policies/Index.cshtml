@@ -5,12 +5,14 @@
 }
 
 <h2>View Policies</h2>
+<br/>
 
 @foreach (var pol in Model.AllPolicies.ToList())
 {
     <p>Name : @pol.PolicyName</p>
     <p>Description : @pol.PolicyDescription</p>
     <p>Category : @pol.Category</p>
+    <hr/>
 }
 
 <h2>View policies by category:</h2>

@@ -30,6 +30,7 @@ namespace HRApplyApp.UI.Controllers
 
             p.PolicyName = Request.Form["Name"];
             p.PolicyDescription = Request.Form["Description"];
+            p.Category = Request.Form["Category"];
 
             var repo = new PolicyRepository();
             repo.RootPath = Server.MapPath("~/");
@@ -78,6 +79,7 @@ namespace HRApplyApp.UI.Controllers
             policy.PolicyID = int.Parse(Request.Form["id"]);
             policy.PolicyName = Request.Form["Name"];
             policy.PolicyDescription = Request.Form["Description"];
+            policy.Category = Request.Form["Category"];
 
             var repo = new PolicyRepository();
             repo.RootPath = Server.MapPath("~/");

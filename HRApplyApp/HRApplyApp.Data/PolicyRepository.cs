@@ -31,19 +31,24 @@ namespace HRApplyApp.Data
                 for (int i = 1; i < reader.Length; i++)
                 {
                     var columns = reader[i].Split(',');
-                    var Policy = new Policy()
+                    var policy = new Policy();
+
+                    for (int j = 2; j < columns.Count() - 1; j++)
                     {
-                        PolicyID = int.Parse(columns[0]),
-                        PolicyName = columns[1],
-                        PolicyDescription = columns[2],
-                        Category = columns[3],
-                    };
+                        policy.PolicyDescription += columns[j] + ",";
+                    }
 
-                    AllPolicies.Add(Policy);
+                    policy.PolicyID = int.Parse(columns[0]);
+                    policy.PolicyName = columns[1];
+                    //policy.PolicyDescription = columns[columns.Count() - 2];
+                    policy.Category = columns[columns.Count() - 1];
+
+                    AllPolicies.Add(policy);
                 }
+
+         
+
             }
-
-
 
             return AllPolicies;
         }
@@ -91,7 +96,7 @@ namespace HRApplyApp.Data
             var policyList = GetAll();
             policyList.RemoveAll(p => p.PolicyID == id);
             WriteFile(policyList);
-            
+
         }
 
         public void Edit(Policy policy)
@@ -100,10 +105,10 @@ namespace HRApplyApp.Data
             policyList.RemoveAll(p => p.PolicyID == policy.PolicyID);
             policyList.Add(policy);
             WriteFile(policyList);
-            
+
         }
 
-        public void WriteFile(List<Policy> policies )
+        public void WriteFile(List<Policy> policies)
         {
 
             using (var writer = File.CreateText(_fileName))

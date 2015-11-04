@@ -14,7 +14,7 @@ namespace HRApplyApp.UI.Models
         public List<Policy> AllPolicies { get; set; } 
         public PolicyCategory Category { get; set; }
         public List<PolicyCategory> Polcatlist { get; set; }
-
+        
         public List<Policy> CreatePolicyList(string cat)
         {
             List<Policy> pollist = new List<Policy>();
