@@ -11,7 +11,7 @@
     <form action="/Policies/EditPolicy" method="POST">
         <p>
             <label>Name</label>
-            <input type="text" id="Name" name="Name" />
+            <input type="text" id="Name" name="Name"/>
         </p>
         <p>
             <label>Description</label>
@@ -19,9 +19,28 @@
         </p>
         <p>
             <label>Category</label>
-            <input type="text" id="Category" name="Category" />
+            <input type="text" id="Category" name="Category"/>
         </p>
         //@Html.Hidden("id", Model.PolicyID);
         <button class="btn btn-primary">Save</button>
     </form>
 </div>
+
+
+@section Admin {
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+            @Html.ActionLink("HR Apply App", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+            <li class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                <a href="#">Policies<span class="caret"></span></a>
+            </li>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("View Policies", "Index", "Policies")</li>
+                <li>@Html.ActionLink("Manage Policies", "Manage", "Policies")</li>
+                <li>@Html.ActionLink("Manage Categories", "ManageCategory", "Policies")</li>
+            </ul>
+            <li>@Html.ActionLink("Admin", "Admin", "Home", new { area = "" }, null)</li>
+        </ul>
+    </div>
+}

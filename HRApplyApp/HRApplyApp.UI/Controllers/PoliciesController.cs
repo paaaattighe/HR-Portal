@@ -96,5 +96,13 @@ namespace HRApplyApp.UI.Controllers
 
             return View(pvm);
         }
+
+        public ActionResult ManageCategory(PoliciesByCategoryVM pvm)
+        {
+            var repo = new PolicyRepository { RootPath = Server.MapPath("~/") };
+            pvm.Polcatlist = repo.GetAllPolicyCategories();
+
+            return View(pvm);
+        }
     }
 }
