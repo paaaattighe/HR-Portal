@@ -16,11 +16,11 @@ namespace HRApplyApp.UI.Controllers
         {
             var repo = new PolicyRepository();
             repo.RootPath = Server.MapPath("~/");
-            var vm = new PoliciesByCategoryVM();
-            vm.AllPolicies = repo.GetAll();
-            vm.Polcatlist = repo.GetAllPolicyCategories();
+            var pvm = new PoliciesByCategoryVM();
+            pvm.AllPolicies = repo.GetAll();
+            pvm.Polcatlist = repo.GetAllPolicyCategories();
 
-            return View("Index", vm);
+            return View("Index", pvm);
         }
 
         [HttpPost]
@@ -88,11 +88,12 @@ namespace HRApplyApp.UI.Controllers
             return RedirectToAction("Manage");
         }
 
-        public ActionResult PoliciesByCategory()
+        [HttpPost]
+        public ActionResult PoliciesByCategory(PoliciesByCategoryVM pvm)
         {
-            var pvm = new PoliciesByCategoryVM();
-            string catname = Request.Form["Name"];
-            pvm.Policies = pvm.CreatePolicyList(catname);
+            var repo = new PolicyRepository {RootPath = Server.MapPath("~/")};
+            pvm.Policies = repo.GetAll().Where(p=>p.Category == pvm.Category).ToList();
+
             return View(pvm);
         }
     }
