@@ -74,3 +74,6 @@ C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\HRApplyApp.Tests.dll
 C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\HRApplyApp.Data.pdb
 C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\HRApplyApp.Tests.pdb
 C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\DataFiles\Policies.txt
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\Dapper.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\Dapper.pdb
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.UI\bin\Dapper.xml
