@@ -17,21 +17,11 @@
 
 <h2>View policies by category:</h2>
 @*drop down here*@
-<div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Categories
-        <span class="caret"></span>
-    </button>
-@using (Html.DropDownListFor(m=>m.Polcatlist, Model.Polcatlist))
+@using (Html.BeginForm("PoliciesByCategory", "Policies", FormMethod.Post))
 {
-    @*<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">*@
-        foreach (var cat in Model.Polcatlist)
-        {
-            <li><a href="PoliciesByCategory.cshtml" id="Name" class="Name">@cat.PolicyCategoryName</a></li>
-        }
-    @*</ul>*@
+    @Html.DropDownListFor(m => m.Category, new SelectList(Model.Polcatlist, "PolicyCategoryName", "PolicyCategoryName"), "Select a category")
+    <button class="btn btn-danger">View policies</button>
 }
-</div>
 
 @section Admin {
     <div class="navbar-collapse collapse">
@@ -44,7 +34,7 @@
             <ul class="dropdown-menu">
                 <li>@Html.ActionLink("View Policies", "Index", "Policies")</li>
                 <li>@Html.ActionLink("Manage Policies", "Manage", "Policies")</li>
-                <li>@Html.ActionLink("Manage Categories", "Admin", "Home")</li>
+                <li>@Html.ActionLink("Manage Categories", "ManageCategory", "Policies")</li>
             </ul>
             <li>@Html.ActionLink("Admin", "Admin", "Home", new { area = "" }, null)</li>
         </ul>

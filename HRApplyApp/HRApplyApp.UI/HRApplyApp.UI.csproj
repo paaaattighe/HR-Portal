@@ -118,6 +118,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PoliciesController.cs" />
+    <Compile Include="Controllers\TimeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -140,6 +141,8 @@
     <Content Include="Views\Policies\Manage.cshtml" />
     <Content Include="Views\Policies\Edit.cshtml" />
     <Content Include="Views\Policies\PoliciesByCategory.cshtml" />
+    <Content Include="Views\Policies\ManageCategory.cshtml" />
+    <Content Include="Views\Time\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

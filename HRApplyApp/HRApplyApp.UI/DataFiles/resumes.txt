@@ -69,3 +69,4 @@
 64,,,,,,,,,,,,,,,,11/2/2015
 65,,,,,,,,,,,,,,,,11/2/2015
 66,,,,,,,,,,,,,,,,11/4/2015
+67,Batman,Batman,122 Wayne Ave,Gotham,11111,Ohio,USA,Batman@Batman.com,Batman@Batman.com,batphone,BMan,Vigilante (current),The Streets,Head,All of it,11/5/2015

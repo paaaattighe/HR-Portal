@@ -1,29 +1,16 @@
-﻿
+﻿@model HRApplyApp.UI.Models.PoliciesByCategoryVM
+
 @{
-    ViewBag.Title = "Add";
+    ViewBag.Title = "ManageCategory";
 }
 
-<h2>Add</h2>
-<div>
-    <h1>Add Policy</h1>
-    <h3>@Html.ActionLink("Back to list", "Manage", "Policies")</h3>
-    <form action="/Policies/AddPolicy" method="POST">
-        <p>
-            <label>Name</label>
-            <input type="text" id="Name" name="Name"/>
-        </p>
-        <p>
-            <label>Description</label>
-            <input type="text" id="Description" name="Description"/>
-        </p>
-        <p>
-            <label>Category</label>
-            <input type="text" id="Category" name="Category"/>
-        </p>
-        <button class="btn btn-primary">Save</button>
-    </form>
-</div>
+<h2>Choose a category to manage:</h2>
 
+@using (Html.BeginForm("PoliciesByCategory", "Policies", FormMethod.Post))
+{
+    @Html.DropDownListFor(m => m.Category, new SelectList(Model.Polcatlist, "PolicyCategoryName", "PolicyCategoryName"), "Select a category")
+    <button class="btn btn-danger">View policies in this category</button>
+}
 
 @section Admin {
     <div class="navbar-collapse collapse">
@@ -41,4 +28,5 @@
             <li>@Html.ActionLink("Admin", "Admin", "Home", new { area = "" }, null)</li>
         </ul>
     </div>
+
 }

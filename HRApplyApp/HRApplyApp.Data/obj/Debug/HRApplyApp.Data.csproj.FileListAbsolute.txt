@@ -12,3 +12,6 @@ C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Data\bin\Debug\HrApplyApp.Models.pdb
 C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Data\obj\Debug\HRApplyApp.Data.csprojResolveAssemblyReference.cache
 C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Data\obj\Debug\HRApplyApp.Data.dll
 C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Data\obj\Debug\HRApplyApp.Data.pdb
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Data\bin\Debug\Dapper.dll
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Data\bin\Debug\Dapper.pdb
+C:\_repos\HR-Portal\HRApplyApp\HRApplyApp.Data\bin\Debug\Dapper.xml
