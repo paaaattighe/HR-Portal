@@ -102,6 +102,10 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\Bitter-Regular.otf" />
+    <Content Include="fonts\Lovelo Black.otf" />
+    <Content Include="fonts\OpenSans-Light.ttf" />
+    <Content Include="fonts\OpenSans-CondBold.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

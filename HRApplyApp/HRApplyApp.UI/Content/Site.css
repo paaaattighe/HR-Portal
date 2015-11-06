@@ -1,12 +1,21 @@
-﻿.navbar-right {
-    background-color:#1f1f1f;
+﻿
+/*NAV
+-------------------------------------------*/
+.navbar-inverse {
+    
+}
+
+.navbar-right {
     font-size: 20px;
     padding-top: 25px;
 }
 
+/*BODY
+-------------------------------------------*/
 body {
-    padding-top: 30px;
+    padding-top: 100px;
     padding-bottom: 20px;
+    background-color: #f8f8f8;
 }
 
 .body-content {
@@ -14,7 +23,79 @@ body {
     padding-right: 15px;
 }
 
+#wrap {
+    background-color: #f8f8f8;
+    padding-bottom: 100px;
+}
 
+html,
+body {
+  padding-top: 40px;
+  background-color: black;
+}
+
+body h1 {
+    font-family: 'Bitter', serif;
+    text-align: center;
+}
+body h2 {
+    font-family: 'Bitter', serif;
+    font-size: 24px;
+    text-align: center;
+}
+body hr {
+    color: black;
+}
+
+#ApplyDescription {
+    font-family: 'Open Sans-Light', sans-serif;
+    font-size: 16px;
+    color: darkgrey;
+}
+
+body h6 {
+    color: #3d3d3d;
+    font-size: 14px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/*PREFOOTER
+--------------------------------------*/
+
+#prefooter {
+    padding-top: 10px;
+    background-color: #252729;
+    padding-bottom: 20px;
+}
+
+#prefooter li {
+    list-style-type: none;
+}
+#prefooter ul li a {
+    color: #ccc;
+    font-size: 15px;
+    font-family: 'Open Sans Condensed';
+}
+#prefooter li a:hover {
+    color: red;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+
+#prefooter h6 {
+    color: #a0a0a0;
+    font-size: 15px;
+    font-family: 'Lovelo Black', sans-serif;
+}
+
+#prefooter p {
+    color: #ccc;
+    font-size: 15px;
+}
+
+/*Footer
+----------------------------------------*/
 footer {
     position: absolute;
     bottom: auto;
@@ -23,37 +104,12 @@ footer {
     height: 100px;
     background-color: #1f1f1f;
 }
-#wrap {
-    margin: 0 auto 100px;
-}
 
-html,
-body {
-  padding-top: 40px;
-  background-color: #f8f8f8;
-}
-
-#prefooter {
-    padding-left: 20px;
-    background-color: #252729;
-}
-
-#prefooter li {
+footer li {
     list-style-type: none;
-    color: #a0a0a0;
-    font-size: 15px;
 }
 
 
-#prefooter h6 {
-    color: #a0a0a0;
-    font-size: 15px;
-}
-
-#prefooter p {
-    color: #a0a0a0;
-    font-size: 15px;
-}
 
 /* Styles for validation helpers
 ------------------------------------------------------*/
@@ -78,4 +134,8 @@ body {
 
 .validation-summary-valid {
     display: none;
+}
+
+.progress-bar  {
+    border-radius: 10px;
 }
