@@ -12,28 +12,31 @@
     {
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-xs-12">
-                    <h4>Name : @pol.PolicyName</h4>
+                <div class="col-md-offset-2 col-md-6 col-xs-12">
+                    <br />
+                    <h3>Name : @pol.PolicyName</h3>
                     <p>Description : @pol.PolicyDescription</p>
                     <p>Category : @pol.Category</p>
                     @*<p>@Html.ActionLink("Edit", "Edit", "Policies", new { id = @pol.PolicyID }, null)</p>*@
-                    @using (Html.BeginForm("Edit", "Policies", FormMethod.Post))
-                    {
-                        @Html.Hidden("id", pol.PolicyID)
-                        <input type="hidden" name="PolicyID" id="PolicyID" value="@pol.PolicyID" />
-                        <button class="btn btn-danger">Edit</button>
-                    }
-                    <br/>
-
-                    @using (Html.BeginForm("Delete", "Policies", FormMethod.Post))
-                    {
-                        @Html.Hidden("id", pol.PolicyID)
-                        <input type="hidden" name="PolicyID" id="PolicyID" value="@pol.PolicyID" />
-                    <button class="btn btn-danger">Delete</button>
-                    }
-                    
-                    <hr />
                 </div>
+                    <div class="col-md-2">
+                        <hr />
+                        @using (Html.BeginForm("Edit", "Policies", FormMethod.Post))
+                        {
+                            @Html.Hidden("id", pol.PolicyID)
+                            <input type="hidden" name="PolicyID" id="PolicyID" value="@pol.PolicyID" />
+                            <button class="btn btn-danger">Edit</button>
+                        }
+                        <br />
+
+                        @using (Html.BeginForm("Delete", "Policies", FormMethod.Post))
+                        {
+                            @Html.Hidden("id", pol.PolicyID)
+                            <input type="hidden" name="PolicyID" id="PolicyID" value="@pol.PolicyID" />
+                            <button class="btn btn-danger">Delete</button>
+                        }
+                    </div>
+                    <hr />            
             </div>
         </div>
     }

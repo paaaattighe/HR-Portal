@@ -7,13 +7,120 @@
 <br />
 <h2>Admin</h2>
 <br />
+<h4>List of Applications</h4>
 
-<div class="no-container">
+<div class="container">
+    <div class="row">
+            <div class="col-xs-2">
+                <h6>ID</h6>
+            </div>
+            <div class="col-xs-2">
+                <h6>First Name</h6>
+            </div>
+            <div class="col-xs-2">
+                <h6>Last Name</h6>
+            </div>
+        <div class="col-xs-2">
+            <h6>Email</h6>
+        </div>
+    </div>
+@foreach (var resume in Model)
+{
+    <div class="row">
+        <div class="panel panel-primary">
+            <div class="col-md-2 col-xs-3">
+                <br />
+                <p>@resume.ApplicantId</p>
+            </div>
+            <div class="col-md-2 col-xs-3">
+                <br />
+                <p>@resume.FirstName</p>
+            </div>
+            <div class="col-md-2 col-xs-3">
+                <br />
+                <p>@resume.LastName</p>
+            </div>
+            <div class="col-md-2 col-xs-3">
+                <br />
+                <p>@resume.Email</p>
+            </div>
+            <div class="col-md-2 col-xs-6">
+                    <button id="moreinfo" class="btn btn-danger btn-sm" type="button" data-toggle="collapse" data-target="#viewdetails_@resume.ApplicantId" aria-expanded="false" aria-controls="collapseExample">
+                        More Info
+                    </button>
+            </div>
+        </div>
+    </div>
+    <div class="collapse" id="viewdetails_@resume.ApplicantId">
+        <div class="well">
+            <div class="row">
+                <div class="col-xs-4">
+                    <h6>Street Address</h6>
+                    <p>@resume.StreetAddress</p>
+                </div>
+                <div class="col-xs-4">
+                    <h6>City</h6>
+                    <p>@resume.City</p>
+                </div>
+                <div class="col-xs-4">
+                    <h6>State</h6>
+                    <p>@resume.State</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <h6>Country</h6>
+                    <p>@resume.Country</p>
+                </div>
+                <div class="col-xs-4">
+                    <h6>Zip Code</h6>
+                    <p>@resume.Zipcode</p>
+                </div>
+                <div class="col-xs-4">
+                    <h6>Phone #</h6>
+                    <p>@resume.PhoneNumber</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <h6>Skype</h6>
+                    <p>@resume.SkypeName</p>
+                </div>
+                <div class="col-xs-4">
+                    <h6>Work History</h6>
+                    <p>@resume.WorkHistory</p>
+                </div>
+                <div class="col-xs-4">
+                    <h6>Education</h6>
+                    <p>@resume.Education</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <h6>Position Applying For</h6>
+                    <p>@resume.Position</p>
+                </div>
+                <div class="col-xs-4">
+                    <h6>Desired Salary</h6>
+                    <p>@resume.Salary</p>
+                </div>
+                <div class="col-xs-4">
+                    <h6>Application Date</h6>
+                    <p>@resume.DateofApplication</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+</div>
+
+@*<div class="no-container">
     <div class="row">
         <div class="col-xs-8">
             @if (Model.Any())
             {
-                <table class="table-hover">
+                <table class="table-hover table-responsive">
                     <thead>
                         <tr>
                             <th>Applicant ID</th>
@@ -26,6 +133,7 @@
                             <th>Country</th>
                             <th>Email</th>
                             <th>Phone Number</th>
+
                             <th>Skype Name</th>
                             <th>Work History</th>
                             <th>Education</th>
@@ -66,7 +174,7 @@
             }
         </div>
     </div>
-</div>
+</div>*@
 
 @section Admin {
 <div class="navbar-collapse collapse">
