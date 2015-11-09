@@ -1,13 +1,11 @@
 ﻿
 /*NAV
 -------------------------------------------*/
-.navbar-inverse {
-    
-}
 
 .navbar-right {
     font-size: 20px;
     padding-top: 25px;
+    font-family: 'Open Sans';
 }
 
 /*BODY
@@ -19,19 +17,19 @@ body {
 }
 
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+
+
 }
 
 #wrap {
     background-color: #f8f8f8;
     padding-bottom: 100px;
+    
 }
 
 html,
 body {
   padding-top: 40px;
-  background-color: black;
 }
 
 body h1 {
@@ -42,9 +40,6 @@ body h2 {
     font-family: 'Bitter', serif;
     font-size: 24px;
     text-align: center;
-}
-body hr {
-    color: black;
 }
 
 #ApplyDescription {
@@ -101,7 +96,7 @@ footer {
     bottom: auto;
     min-width: 100%;
     text-align: left;
-    height: 100px;
+    height: 80px;
     background-color: #1f1f1f;
 }
 
@@ -138,4 +133,15 @@ footer li {
 
 .progress-bar  {
     border-radius: 10px;
+}
+
+
+.table-hover {
+
+        font-size: 12px;
+    }
+
+#moreinfo {
+    margin-top: 10px;
+    float: right;
 }
