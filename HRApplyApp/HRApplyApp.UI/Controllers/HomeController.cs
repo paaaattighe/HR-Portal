@@ -24,7 +24,6 @@ namespace HRApplyApp.UI.Controllers
             repo.RootPath = Server.MapPath("~/");
             repo.Add(newResume);
             
-
             if (ModelState.IsValid)
             {
             return View("Result", newResume);

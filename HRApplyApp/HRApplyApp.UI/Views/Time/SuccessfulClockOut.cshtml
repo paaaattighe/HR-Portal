@@ -1,0 +1,17 @@
+﻿@model HrApplyApp.Models.Employee
+
+@{
+    ViewBag.Title = "SuccessfulClockOut";
+}
+
+<h2>Successful ClockOut!!</h2>
+
+<p>Thanks for your work, @Model.FirstName @Model.LastName!!</p>
+<br/>
+<p>You clocked out at @Model.ClockOut</p>
+<br/>
+<p>You worked @Model.HoursWorked today.</p>
+<br/>
+<p>@Html.ActionLink("Back to Home", "Index", "Time")</p>
+
+

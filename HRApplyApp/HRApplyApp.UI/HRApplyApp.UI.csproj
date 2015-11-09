@@ -143,6 +143,11 @@
     <Content Include="Views\Policies\PoliciesByCategory.cshtml" />
     <Content Include="Views\Policies\ManageCategory.cshtml" />
     <Content Include="Views\Time\Index.cshtml" />
+    <Content Include="Views\Time\Clock.cshtml" />
+    <Content Include="Views\Time\SuccessfulClockIn.cshtml" />
+    <Content Include="Views\Time\UnsuccessfulClockIn.cshtml" />
+    <Content Include="Views\Time\SuccessfulClockOut.cshtml" />
+    <Content Include="Views\Time\UnsuccessfulClockOut.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

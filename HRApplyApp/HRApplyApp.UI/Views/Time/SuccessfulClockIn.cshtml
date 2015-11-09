@@ -1,0 +1,13 @@
+﻿@model HrApplyApp.Models.Employee
+
+@{
+    ViewBag.Title = "SuccessfulClockIn";
+}
+
+<h2>Successful ClockIn!!</h2>
+
+<p>Welcome to Work, @Model.FirstName @Model.LastName!!</p>
+<br/>
+<p>You clocked in at @Model.ClockIn.ToString()</p>
+<br/>
+<p>@Html.ActionLink("Back to Home", "Index", "Time")</p>
