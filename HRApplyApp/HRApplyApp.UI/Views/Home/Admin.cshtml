@@ -11,16 +11,16 @@
 
 <div class="container">
     <div class="row">
-            <div class="col-xs-2">
+            <div class="col-md-2 col-xs-3">
                 <h6>ID</h6>
             </div>
-            <div class="col-xs-2">
+            <div class="col-md-2 col-xs-3">
                 <h6>First Name</h6>
             </div>
-            <div class="col-xs-2">
+            <div class="col-md-2 col-xs-3">
                 <h6>Last Name</h6>
             </div>
-        <div class="col-xs-2">
+        <div class="col-md-2 col-xs-3">
             <h6>Email</h6>
         </div>
     </div>
@@ -40,7 +40,7 @@
                 <br />
                 <p>@resume.LastName</p>
             </div>
-            <div class="col-md-2 col-xs-3">
+            <div class="col-md-2 col-xs-6">
                 <br />
                 <p>@resume.Email</p>
             </div>
@@ -115,81 +115,27 @@
 
 </div>
 
-@*<div class="no-container">
-    <div class="row">
-        <div class="col-xs-8">
-            @if (Model.Any())
-            {
-                <table class="table-hover table-responsive">
-                    <thead>
-                        <tr>
-                            <th>Applicant ID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Street Address</th>
-                            <th>City</th>
-                            <th>State</th>
-                            <th>Zip Code</th>
-                            <th>Country</th>
-                            <th>Email</th>
-                            <th>Phone Number</th>
-
-                            <th>Skype Name</th>
-                            <th>Work History</th>
-                            <th>Education</th>
-                            <th>Position</th>
-                            <th>Desired Salary</th>
-                            <th>Date of Application</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var resume in Model)
-                        {
-                            <tr>
-                                <td>@resume.ApplicantId</td>
-                                <td>@resume.FirstName</td>
-                                <td>@resume.LastName</td>
-                                <td>@resume.StreetAddress</td>
-                                <td>@resume.City</td>
-                                <td>@resume.State</td>
-                                <td>@resume.Zipcode</td>
-                                <td>@resume.Country</td>
-                                <td>@resume.Email</td>
-                                <td>@resume.PhoneNumber</td>
-                                <td>@resume.SkypeName</td>
-                                <td>@resume.WorkHistory</td>
-                                <td>@resume.Education</td>
-                                <td>@resume.Position</td>
-                                <td>@resume.Salary</td>
-                                <td>@resume.DateofApplication</td>
-
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            }
-            else
-            {
-                <p>No Resumes.</p>
-            }
-        </div>
-    </div>
-</div>*@
-
 @section Admin {
-<div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav navbar-right">
-        @Html.ActionLink("HR Apply App", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-
-        <li class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
-            <a href="#">Policies<span class="caret"></span></a>
-        </li>
-        <ul class="dropdown-menu">
-            <li>@Html.ActionLink("View Policies", "Index", "Policies")</li>
-            <li>@Html.ActionLink("Manage Policies", "Manage", "Policies")</li>
-            <li>@Html.ActionLink("Manage Categories", "ManageCategory", "Policies")</li>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li>@Html.ActionLink("HR Apply App", "Index", "Home", new { area = "" })</li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Policies <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("View Policies", "Index", "Policies")</li>
+                    <li>@Html.ActionLink("Manage Policies", "Manage", "Policies")</li>
+                    <li>@Html.ActionLink("Manage Categories", "ManageCategory", "Policies")</li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Time Tracking <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Submit Time", "Index", "Time")</li>
+                    <li>@Html.ActionLink("View Timesheet", "Index", "Policies")</li>
+                </ul>
+            </li>
+            <li>@Html.ActionLink("Admin", "Admin", "Home", new { area = "" }, null)</li>
         </ul>
-        <li>@Html.ActionLink("Admin", "Admin", "Home", new { area = "" }, null)</li>
-    </ul>
-</div>
+    </div>
+
 }
