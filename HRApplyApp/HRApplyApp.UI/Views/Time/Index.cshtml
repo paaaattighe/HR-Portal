@@ -58,26 +58,40 @@ Credit MUST stay intact for use
 
 @section Admin {
     <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-            @Html.ActionLink("HR Apply App", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        @*dropdown new*@
+        @*<div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Dropdown
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>*@
 
-            <li class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
-                <a href="#">Policies<span class="caret"></span></a>
+        <ul class="nav navbar-nav navbar-right">
+            @Html.ActionLink("HR Apply App", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
+
+            <li class="dropdown dropdown-toggle navbar-collapse collapse" id="dropdownMenu1" data-toggle="dropdown" @*style="position: relative"*@>
+                <a href="">Policies<span class="caret"></span></a>
             </li>
-            <ul class="dropdown-menu">
+            <ul class="dropdown dropdown-menu" aria-labelledby="dropdownMenu1" style="position: relative">
                 <li>@Html.ActionLink("View Policies", "Index", "Policies")</li>
                 <li>@Html.ActionLink("Manage Policies", "Manage", "Policies")</li>
                 <li>@Html.ActionLink("Manage Categories", "ManageCategory", "Policies")</li>
             </ul>
 
-            <li class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown">
+            <li class="dropdown dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" @*style="position: relative"*@>
                 <a href="#">Time Tracking<span class="caret"></span></a>
             </li>
-            <ul class="dropdown-menu">
+            <ul class="dropdown dropdown-menu" aria-labelledby="dropdownMenu2" style="position: relative">
                 <li>@Html.ActionLink("Submit Time", "Index", "Time")</li>
                 <li>@Html.ActionLink("View Timesheet", "Index", "Time")</li>
             </ul>
-            <li>@Html.ActionLink("Admin", "Admin", "Home", new { area = "" }, null)</li>
+            <li>@Html.ActionLink("Admin", "Admin", "Home", new {area = ""}, null)</li>
         </ul>
     </div>
 
