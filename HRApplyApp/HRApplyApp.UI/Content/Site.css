@@ -1,11 +1,16 @@
 ﻿
 /*NAV
 -------------------------------------------*/
+.navbar-inverse {
+    background-color: #1f1f1f;
+    border-color: #1f1f1f;
+}
 
 .navbar-right {
     font-size: 20px;
     padding-top: 25px;
     font-family: 'Open Sans';
+    
 }
 
 /*BODY
@@ -37,6 +42,7 @@ body h1 {
     text-align: center;
 }
 body h2 {
+    padding-top: 20px;
     font-family: 'Bitter', serif;
     font-size: 24px;
     text-align: center;
@@ -45,13 +51,25 @@ body h2 {
 #ApplyDescription {
     font-family: 'Open Sans-Light', sans-serif;
     font-size: 16px;
-    color: darkgrey;
+    color: #676767;
 }
 
 body h6 {
     color: #3d3d3d;
     font-size: 14px;
     font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+.margin-top-40 {
+    margin-top: 40px;
 }
 
 /*PREFOOTER
@@ -131,6 +149,9 @@ footer li {
     display: none;
 }
 
+/*Misc 
+-----------------------------------*/
+
 .progress-bar  {
     border-radius: 10px;
 }
@@ -144,4 +165,27 @@ footer li {
 #moreinfo {
     margin-top: 10px;
     float: right;
+}
+
+hr {
+    border-color:palevioletred;
+}
+
+.btn-danger {
+    margin-top: 20px;
+    background-color: #edaa14;
+    background-color: #edaa14;
+}
+.btn-danger:hover {
+    background-color: #676767;
+    border-color: #676767;
+}
+
+#applicationForm {
+    background-color: white; 
+    box-shadow: 0 0 5px darkgrey;
+}
+
+.center {
+    margin: auto;
 }

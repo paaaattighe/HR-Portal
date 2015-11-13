@@ -7,7 +7,6 @@
 <div class="container">
     <div class="row">
         <div class=" col-md-4 col-xs-12">
-            <br />
             <h2>Your career is waiting.</h2>
             <h1>START YOUR APPLICATION!</h1>
             <p id="ApplyDescription">
@@ -19,11 +18,10 @@
             <hr />
         </div>
         <div class="col-md-8 col-xs-12">
-            <br />
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <p>Application Process</p>
+                        <p class="margin-top-40">Application Process</p>
                         <div class="progress">
                             <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%">
                                 <span class="sr-only">33% Complete (danger)</span>
@@ -32,7 +30,7 @@
                     </div>
                 </div>
             </div>
-                <div style="background-color: white; box-shadow: 0 0 5px darkgrey;" class="container">
+                <div id="applicationForm" class="container">
                     <br />
                     @using (Html.BeginForm("Index", "Home", FormMethod.Post))
                     {
@@ -110,7 +108,7 @@
                                     <h6>Desired Salary: </h6>
                                     <p>@Html.TextBoxFor(m => m.Salary, new { style = "width:100%", placeholder = "Desired Salary" })</p>
                                 </div>
-                                <button style="width: 100%;" class="btn btn-danger">Apply Now</button>
+                                <button class="btn btn-danger btn-block btn-lg">Apply Now</button>
                                 <br />
                                 <br />
                             </div>
