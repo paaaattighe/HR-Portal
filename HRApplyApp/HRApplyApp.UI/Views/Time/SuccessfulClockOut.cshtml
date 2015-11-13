@@ -15,3 +15,28 @@
 <p>@Html.ActionLink("Back to Home", "Index", "Time")</p>
 
 
+
+@section Admin {
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li>@Html.ActionLink("HR Apply App", "Index", "Home", new { area = "" })</li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Policies <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("View Policies", "Index", "Policies")</li>
+                    <li>@Html.ActionLink("Manage Policies", "Manage", "Policies")</li>
+                    <li>@Html.ActionLink("Manage Categories", "ManageCategory", "Policies")</li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Time Tracking <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Submit Time", "Index", "Time")</li>
+                    <li class="disabled">@Html.ActionLink("View Timesheet", "Index", "Time")</li>
+                </ul>
+            </li>
+            <li>@Html.ActionLink("Admin", "Admin", "Home", new { area = "" }, null)</li>
+        </ul>
+    </div>
+
+}
