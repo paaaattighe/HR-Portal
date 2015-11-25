@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using HrApplyApp.Models;
 using HRApplyApp.Data;
+using HRApplyApp.UI.Models;
 
 namespace HRApplyApp.UI.Controllers
 {
@@ -13,51 +14,16 @@ namespace HRApplyApp.UI.Controllers
         // GET: Time
         public ActionResult Index()
         {
+            var repo = new EmployeeRepository();
+            var employeeList = repo.GetAll();
+            var vm =  new TimeVM(employeeList);
+
+            return View(vm);
+        }
+
+        public ActionResult TimeSheet()
+        {
             return View();
-        }
-
-        [HttpPost]
-        public ActionResult Index(Employee emp)
-        {
-            if (ModelState.IsValid)
-            {
-                var repo = new EmployeeRepository();
-                emp = repo.GetAll().FirstOrDefault(m => m.EmpID == emp.EmpID);
-                return View("Clock", emp);
-            }
-
-            return View(emp);
-        }
-
-        [HttpPost]
-        public ActionResult ClockIn(Employee emp)
-        {
-            var repo = new EmployeeRepository();
-            var checkemp = repo.GetAll().FirstOrDefault(m => m.EmpID == emp.EmpID);
-
-            if (checkemp != null && checkemp.IsClockedIn == 0)
-            {
-                repo.EmployeeClockIn(emp.EmpID);
-                emp.ClockIn = DateTime.Now;
-                return View("SuccessfulClockIn", emp);
-            }
-            return View("UnsuccessfulClockIn", emp);
-        }
-
-        [HttpPost]
-        public ActionResult ClockOut(Employee emp)
-        {
-            var repo = new EmployeeRepository();
-            var checkemp = repo.GetAll().FirstOrDefault(m => m.EmpID == emp.EmpID);
-
-            if (checkemp != null && checkemp.IsClockedIn == 1)
-            {
-                repo.EmployeeClockOut(emp.EmpID);
-                emp.ClockOut = DateTime.Now;
-                emp.HoursWorked = emp.ClockOut - checkemp.ClockIn;
-                return View("SuccessfulClockOut", emp);
-            }
-            return View("UnsuccessfulClockOut", emp);
         }
     }
 }
