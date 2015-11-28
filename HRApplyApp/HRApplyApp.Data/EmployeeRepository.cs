@@ -25,25 +25,26 @@ namespace HRApplyApp.Data
             }
         }
 
-        public void EmployeeClockIn(int id)
+        public List<TimeRecord> GetTimeRecords()
         {
             using (SqlConnection cn = new SqlConnection(Settings.ConnectionString))
             {
-                var p = new DynamicParameters();
-                p.Add("ID", id);
+                var timeRecords = cn.Query<TimeRecord>("select EmpID, DateWorked, HoursWorked from HoursWorked").ToList();
 
-                cn.Execute("dbo.ClockIn", p, commandType: CommandType.StoredProcedure);
+                return timeRecords;
             }
         }
 
-        public void EmployeeClockOut(int id)
+        public void AddTimeRecordToDB(TimeRecord tr)
         {
             using (SqlConnection cn = new SqlConnection(Settings.ConnectionString))
             {
                 var p = new DynamicParameters();
-                p.Add("ID", id);
+                p.Add("EmpID", tr.EmpID);
+                p.Add("DateWorked", tr.DateWorked.ToShortDateString());
+                p.Add("HoursWorked", tr.HoursWorked);
 
-                cn.Execute("dbo.ClockOut", p, commandType: CommandType.StoredProcedure);
+                cn.Execute("dbo.AddTimeRecord", p, commandType: CommandType.StoredProcedure);
             }
         }
     }

@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace HrApplyApp.Models
 {
-    public class Employee
+    public class TimeRecord
     {
         public int EmpID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public List<TimeRecord> TimeRecords { get; set; } 
+        public DateTime DateWorked { get; set; }
+        public decimal HoursWorked { get; set; }
     }
 }

@@ -1,27 +1,37 @@
-﻿@model HRApplyApp.UI.Models.TimeVM
-
+﻿@model List<HrApplyApp.Models.Employee>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "TimeSheet";
 }
 
-<h2>Time Management</h2>
+<h2>TimeSheet</h2>
 
-@using (Html.BeginForm("SubmitTime", "Time", FormMethod.Post))
+@foreach (var employee in Model)
 {
     <div class="row">
-        <div class="form-group">
-            <label class="label label-default">Select Employee</label>
-            @Html.DropDownList("EmpID", Model.Employees, "(select)", new {@class = "dropdown", @id = "inputEmployee"})
+        <div class="panel panel-primary">
+            <div class="col-md-2 col-xs-3">
+                <br />
+                <p>@employee.EmpID</p>
+            </div>
+            <div class="col-md-2 col-xs-3">
+                <br />
+                <p>@employee.FirstName @employee.LastName</p>
+            </div>
+            <div class="col-md-2 col-xs-3">
+                <br/>
+                @foreach (var timeSheet in employee.TimeRecords)
+                {
+                    <p>Date : @timeSheet.DateWorked.ToShortDateString()</p>
+                }
+            </div>
+            <div class="col-md-2 col-xs-3">
+                <br />
+                @foreach (var timeSheet in employee.TimeRecords)
+                {
+                    <p>Hours Worked : @timeSheet.HoursWorked</p>
+                }
+            </div>
         </div>
-        <div class="form-group">
-            <label class="label label-default">Day Worked</label>
-            <input id="theDate" type="text" name="DateWorked"/>
-        </div>
-        <div class="form-group">
-            <label class="label label-default">Hours Worked</label>
-            <input id="hoursWorkedInputField" type="number" step="any" name="HoursWorked"/>
-        </div>
-        <button class="btn btn-primary">Submit</button>
     </div>
 }
 
@@ -48,10 +58,4 @@
         </ul>
     </div>
 
-}
-
-@section Scripts{
-    <script src="/Scripts/jquery-ui-1.10.2.min.js"></script>
-    <script src="/Scripts/app/datePicker.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 }

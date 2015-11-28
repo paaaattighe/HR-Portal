@@ -21,9 +21,31 @@ namespace HRApplyApp.UI.Controllers
             return View(vm);
         }
 
+        [HttpPost]
+        public ActionResult SubmitTime(TimeRecord record)
+        {
+            var repo = new EmployeeRepository();
+            repo.AddTimeRecordToDB(record);
+
+            return RedirectToAction("TimeSheet");
+        }
+
         public ActionResult TimeSheet()
         {
-            return View();
+            var repo = new EmployeeRepository();
+            var timeRecords = repo.GetTimeRecords();
+            var employeeList = repo.GetAll();
+            foreach (var employee in employeeList)
+            {
+                employee.TimeRecords = new List<TimeRecord>();
+
+                foreach (var timeRecord in timeRecords.Where(timeRecord => timeRecord.EmpID == employee.EmpID))
+                {
+                    employee.TimeRecords.Add(timeRecord);
+                }
+            }
+
+            return View(employeeList);
         }
     }
 }
