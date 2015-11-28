@@ -42,6 +42,7 @@ namespace HRApplyApp.UI.Controllers
                 foreach (var timeRecord in timeRecords.Where(timeRecord => timeRecord.EmpID == employee.EmpID))
                 {
                     employee.TimeRecords.Add(timeRecord);
+                    employee.TimeRecords = employee.TimeRecords.OrderBy(s=>s.DateWorked).ToList();
                 }
             }
 
