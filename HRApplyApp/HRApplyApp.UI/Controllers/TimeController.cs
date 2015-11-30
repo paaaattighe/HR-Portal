@@ -24,10 +24,14 @@ namespace HRApplyApp.UI.Controllers
         [HttpPost]
         public ActionResult SubmitTime(TimeRecord record)
         {
-            var repo = new EmployeeRepository();
-            repo.AddTimeRecordToDB(record);
+            if (ModelState.IsValid)
+            {
+                var repo = new EmployeeRepository();
+                repo.AddTimeRecordToDB(record);
 
-            return RedirectToAction("TimeSheet");
+                return RedirectToAction("TimeSheet");
+            }
+            return RedirectToAction("Index");
         }
 
         public ActionResult TimeSheet()

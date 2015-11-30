@@ -1,4 +1,5 @@
-﻿@model HRApplyApp.UI.Models.TimeVM
+﻿@using System.Web.UI.WebControls
+@model HRApplyApp.UI.Models.TimeVM
 
 @{
     ViewBag.Title = "Index";
@@ -8,6 +9,7 @@
 
 @using (Html.BeginForm("SubmitTime", "Time", FormMethod.Post))
 {
+    @Html.ValidationSummary(true)
     <div class="row">
         <div class="form-group">
             <label class="label label-default">Select Employee</label>
