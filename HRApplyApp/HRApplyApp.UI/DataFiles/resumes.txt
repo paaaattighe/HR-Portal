@@ -6,3 +6,5 @@
 5,Batman,Batman,122 Wayne Ave,Gotham,11111,Ohio,USA,Batman@Batman.com,Batman@Batman.com,batphone,BMan,Vigilante (current),The Streets,Head,All of it,11/5/2015
 6,BynByn,CooolKid,123 ST,Fargo,12341234,asdf,asdf,s;fksafl,s;fksafl,30303030,@butt,afsd,asdf,asdf,asfd,11/8/2015
 7,asfsadf,asdsadf,,,,,,,,,,,,,,11/11/2015
+8,Frank,Grimes,,,,,,Grimes@vm.com,,,,,,,,12/3/2015
+9,Frank,Grimes,333 street st,Cityvile,44129,oh,USA,Grimes@vm.com,Grimes@vm.com,55555555,,fdfdsfdsvsdv,svdvdvdsvdsv,Position,1,12/3/2015

@@ -19,7 +19,7 @@ namespace HRApplyApp.Data
             using (SqlConnection cn = new SqlConnection(Settings.ConnectionString))
             {
                 // select * from employee not working because of discrepancy between SQL time and .NET time
-                var employees = cn.Query<Employee>("select e.EmpID, e.FirstName, e.LastName, e.HireDate, e.LocationID, e.ManagerID, e.[Status], e.IsClockedIn from Employee e").ToList();
+                var employees = cn.Query<Employee>("select e.EmpID, e.FirstName, e.LastName, e.HireDate, e.LocationID, e.ManagerID, e.[Status] from Employee e").ToList();
 
                 return employees;
             }
